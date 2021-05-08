@@ -5,19 +5,21 @@ from tkinter import *
 import tkinter
 from tkinter import ttk
 #import tkFont 
-df=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Encounter Table (Output)')
-temp=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Temp')
-rain=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Rain')
-wind=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Wind')
-Distance=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Distance')
-Number=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Number')
-Goals=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Goals')
-Villains=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Villain')
-Patrons=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Patrons')
-Allies=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Allies')
-All_Spells=pd.read_excel('C:/Users/matth/Downloads/DnD_Spells_Input.xlsx', sheet_name='Spells')
+#Encounter Table
+df=pd.read_excel('filepath', sheet_name='Encounter Table (Output)')
+temp=pd.read_excel('filepath', sheet_name='Temp')
+rain=pd.read_excel('filepath', sheet_name='Rain')
+wind=pd.read_excel('filepath', sheet_name='Wind')
+Distance=pd.read_excel('filepath', sheet_name='Distance')
+Number=pd.read_excel('filepath', sheet_name='Number')
+Goals=pd.read_excel('filepath', sheet_name='Goals')
+Villains=pd.read_excel('filepath', sheet_name='Villain')
+Patrons=pd.read_excel('filepath', sheet_name='Patrons')
+Allies=pd.read_excel('filepath', sheet_name='Allies')
+#Spells
+All_Spells=pd.read_excel('filepath', sheet_name='Spells')
 Spells=All_Spells[(All_Spells['Wizard']=="Yes")]
-Wealth=pd.read_excel('C:/Users/matth/Downloads/DnD_Spells_Input.xlsx', sheet_name='Wealth')
+Wealth=pd.read_excel('filepath', sheet_name='Wealth')
 
 
 
