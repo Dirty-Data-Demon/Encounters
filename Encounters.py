@@ -5,21 +5,19 @@ from tkinter import *
 import tkinter
 from tkinter import ttk
 #import tkFont 
-#Encounter Table
-df=pd.read_excel('filepath', sheet_name='Encounter Table (Output)')
-temp=pd.read_excel('filepath', sheet_name='Temp')
-rain=pd.read_excel('filepath', sheet_name='Rain')
-wind=pd.read_excel('filepath', sheet_name='Wind')
-Distance=pd.read_excel('filepath', sheet_name='Distance')
-Number=pd.read_excel('filepath', sheet_name='Number')
-Goals=pd.read_excel('filepath', sheet_name='Goals')
-Villains=pd.read_excel('filepath', sheet_name='Villain')
-Patrons=pd.read_excel('filepath', sheet_name='Patrons')
-Allies=pd.read_excel('filepath', sheet_name='Allies')
-#Spells
-All_Spells=pd.read_excel('filepath', sheet_name='Spells')
+df=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Encounter Table (Output)')
+temp=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Temp')
+rain=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Rain')
+wind=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Wind')
+Distance=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Distance')
+Number=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Number')
+Goals=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Goals')
+Villains=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Villain')
+Patrons=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Patrons')
+Allies=pd.read_excel('C:/Users/matth/Downloads/My_Master_Encounter_Table_IX.xlsx', sheet_name='Allies')
+All_Spells=pd.read_excel('C:/Users/matth/Downloads/DnD_Spells_Input.xlsx', sheet_name='Spells')
 Spells=All_Spells[(All_Spells['Wizard']=="Yes")]
-Wealth=pd.read_excel('filepath', sheet_name='Wealth')
+Wealth=pd.read_excel('C:/Users/matth/Downloads/DnD_Spells_Input.xlsx', sheet_name='Wealth')
 
 
 
@@ -71,26 +69,26 @@ def get_spells():
     genu8=gen8[(gen8['School']!=School)]
     genu9=gen9[(gen9['School']!=School)]
     #Re order all Dfs to  randomize the results
-    sh1.sample(frac=1)
-    sh2.sample(frac=1) 
-    sh3.sample(frac=1)  
-    sh4.sample(frac=1)   
-    sh5.sample(frac=1)
-    sh6.sample(frac=1)
-    sh7.sample(frac=1)
-    sh8.sample(frac=1)
-    sh9.sample(frac=1)
-    sh1.sample(frac=1)
 
-    genu1.sample(frac=1)
-    genu2.sample(frac=1)
-    genu3.sample(frac=1)
-    genu4.sample(frac=1)
-    genu5.sample(frac=1)
-    genu6.sample(frac=1)
-    genu7.sample(frac=1)
-    genu8.sample(frac=1)
-    genu9.sample(frac=1)
+    sh1=sh1.sample(frac=1)
+    sh2=sh2.sample(frac=1) 
+    sh3=sh3.sample(frac=1)  
+    sh4=sh4.sample(frac=1)   
+    sh5=sh5.sample(frac=1)
+    sh6=sh6.sample(frac=1)
+    sh7=sh7.sample(frac=1)
+    sh8=sh8.sample(frac=1)
+    sh9=sh9.sample(frac=1)
+
+    genu1=genu1.sample(frac=1)
+    genu2=genu2.sample(frac=1)
+    genu3=genu3.sample(frac=1)
+    genu4=genu4.sample(frac=1)
+    genu5=genu5.sample(frac=1)
+    genu6=genu6.sample(frac=1)
+    genu7=genu7.sample(frac=1)
+    genu8=genu8.sample(frac=1)
+    genu9=genu9.sample(frac=1)
 
     # By wealth level, assign the correct number of spells based on the level of the wizard. Repeat for all wealth levels
     if Wealth_name=="Poor":
