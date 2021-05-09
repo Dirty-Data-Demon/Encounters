@@ -716,27 +716,27 @@ def Encounter_get():
 
    if (5-Development)>=1 and tag1=="Location" :
             Encounter1.configure(text="Encounter 1: " + result_1+" at "+d_result1+" Distance " +mresult_1)
-   elif (5-Development)>=1 : Encounter1.configure(text="Encounter 1: "+num_result_1+" "+result_1+" at "+d_result1+" Distance " +mresult_1)
+   elif (5-Development)>=1 : Encounter1.configure(text="Encounter 1: "+num_result_1+" "+result_1+" at "+d_result1+"distance " +mresult_1)
             
    if (5-Development)>=2 and tag2=="Location" :
            Encounter2.configure(text="Encounter 2: " + result_2+" at "+d_result2+" Distance " +mresult_2)
-   elif (5-Development)>=2: Encounter2.configure(text="Encounter 2: "+num_result_2+" "+result_2+" at "+d_result2+" Distance " +mresult_2)
+   elif (5-Development)>=2: Encounter2.configure(text="Encounter 2: "+num_result_2+" "+result_2+" at "+d_result2+"distance " +mresult_2)
 
    if (5-Development)>=3 and tag3=="Location" :
             Encounter3.configure(text="Encounter 3: " + result_3+" at "+d_result3+" Distance " +mresult_3)
-   elif (5-Development)>=3 : Encounter3.configure(text="Encounter 3: "+num_result_3+" "+result_3+" at "+d_result3+" Distance " +mresult_3)
+   elif (5-Development)>=3 : Encounter3.configure(text="Encounter 3: "+num_result_3+" "+result_3+" at "+d_result3+" distance " +mresult_3)
 
    if (5-Development)>=4 and tag4=="Location" :
            Encounter4.configure(text="Encounter 4: " + result_4+" at "+d_result4+" Distance " +mresult_4)
-   elif (5-Development)>=4: Encounter4.configure(text="Encounter 4: "+num_result_4+" "+result_4+" at "+d_result4+" Distance " +mresult_4)
+   elif (5-Development)>=4: Encounter4.configure(text="Encounter 4: "+num_result_4+" "+result_4+" at "+d_result4+" distance " +mresult_4)
             
    if (5-Development)>=5 and tag5=="Location" :
             Encounter5.configure(text="Encounter 5: " + result_5+" at "+d_result5+" Distance " +mresult_5)
-   elif (5-Development)>=5: Encounter5.configure(text="Encounter 5: "+num_result_5+" "+result_5+" at "+d_result5+" Distance " +mresult_5)
+   elif (5-Development)>=5: Encounter5.configure(text="Encounter 5: "+num_result_5+" "+result_5+" at "+d_result5+" distance " +mresult_5)
 
-   morning.configure(text="Morning Weather: A "+temp_result_1+" Day With "+rain_result_1+" Air and "+wind_result_1)
-   afternoon.configure(text="Afternoon Weather: A "+temp_result_2+" Day With "+rain_result_2+" Air and "+wind_result_2)
-   night.configure(text="Night Weather: A "+temp_result_3+" Day With "+rain_result_3+" Air and "+wind_result_3)
+   morning.configure(text="Morning Weather: A "+temp_result_1+" morning with "+rain_result_1+" air and "+wind_result_1)
+   afternoon.configure(text="Afternoon Weather: A "+temp_result_2+" day with "+rain_result_2+" air and "+wind_result_2)
+   night.configure(text="Night Weather: A "+temp_result_3+" night With "+rain_result_3+" Air and "+wind_result_3)
 #Roll on adventure tables from the DMG and crete a new window
 def Quest ():
     jobwin=Toplevel(root)
@@ -833,6 +833,7 @@ df.head(0)
 root = Tk()
 root.geometry("600x600")
 root.title("Daily Encounters")
+Frame(root, height=50, width=600).pack()
 entry=ttk.Entry(root, width=3)
 entry.pack()
 
@@ -867,7 +868,6 @@ weather.pack()
 morning.pack()
 afternoon.pack()
 night.pack()
-
 
 Encounter=ttk.Button(root,text="Roll on  Table",command=Encounter_get)
 Encounter.pack()
